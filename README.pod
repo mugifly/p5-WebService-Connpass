@@ -11,13 +11,13 @@ WebService::Connpass - connpass API (v1) wrapper module for perl5
   # Request event
   $connpass->fetch( 'event', keyword => 'perl' );
   
-  # Print each events title
+  # Print each events information
   while ( my $event = $connpass->next ){
-      print $event->title . " (" . $event->event_id . ")";
-      if($event->started){
-          print " - ".$event->started;
-      }
-      print "\n";
+    # Title and Event ID
+    print $event->title . " (" . $event->event_id . ")";
+    # Date (started_at)
+    print " - ".$event->started if $event->started;
+    print "\n";
   }
 
 =head1 INSTALLATION (from GitHub)
