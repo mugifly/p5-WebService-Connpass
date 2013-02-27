@@ -4,17 +4,20 @@ WebService::Connpass - connpass API (v1) wrapper module for perl5
 
 =head1 SYNOPSIS
 
-  use WebService::Connpass->new( encoding => 'utf8' );
+  use WebService::Connpass;
   
-  my $connpass = WebService::Connpass;
+  my $connpass = WebService::Connpass->new( encoding => 'utf8' );
   
   # Request event
   $connpass->fetch( 'event', keyword => 'perl' );
   
   # Print each events title
   while ( my $event = $connpass->next ){
-        print $event->title . " - " . $event->id;
-        if($event->started){ print " - " . $event->stared; }
+      print $event->title . " (" . $event->event_id . ")";
+      if($event->started){
+          print " - ".$event->started;
+      }
+      print "\n";
   }
 
 =head1 INSTALLATION (from GitHub)
