@@ -297,7 +297,7 @@ Set or get a position of iterator.
 
 L<https://github.com/mugifly/p5-WebService-Connpass/> - Your feedback is highly appreciated.
 
-L<WebService::Zussar> - https://github.com/mugifly/WebService-Zussar/
+L<p5-WebService::Zusaar> - https://github.com/mugifly/p5-WebService-Zusaar/
 
 L<DateTime::Format::ISO8601>
 
